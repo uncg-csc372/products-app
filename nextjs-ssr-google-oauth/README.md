@@ -16,7 +16,7 @@ npm install && npm run build
 ```
 and the start command to
 ```
-npm start
+export AUTH_URL=$RENDER_EXTERNAL_URL && npm start
 ```
 5. Add environment variables for your Google OAuth credentials:
 ```

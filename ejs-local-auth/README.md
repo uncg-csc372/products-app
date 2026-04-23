@@ -10,16 +10,23 @@ ejs-local-auth
 ```
 
 in the build settings.
+
 4. Set the build command to
 
-```npm install
+```
+npm install
 ```
 and the start command to
 
-```node server.js
 ```
+node server.js
+```
+
 5. Add environment variable for your Neon database connection string
 
-```DATABASE_URL
-```with the value of your Neon database connection string.
+```
+DATABASE_URL
+```
+with the value of your Neon database connection string.
+
 6. Deploy the service and it should be live in a few minutes!

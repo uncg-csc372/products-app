@@ -21,7 +21,7 @@ npm install
 and the start command to
 
 ```
-npm start
+node server.js
 ```
 
 5. Add environment variable for your Neon database connection string

@@ -24,14 +24,11 @@
     let heading = document.createElement("h3");
     heading.appendChild(document.createTextNode(productObject.name));
     let para = document.createElement("p");
-    para.appendChild(document.createTextNode("Type: " + productObject.type + ", Price: " + productObject.price));
+    para.appendChild(document.createTextNode("Type: " + productObject.type + ", Price: $" + productObject.price));
     article.appendChild(heading);
     article.appendChild(para);
     productsDiv.appendChild(article);
   }
-
-
-
 
 
 

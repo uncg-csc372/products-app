@@ -1,0 +1,32 @@
+<%- include('./partials/head') %>
+    <script src="/script.js" defer></script>
+    </head>
+
+    <body>
+        <%- include('./partials/nav') %>
+            <h1>
+                <%= title %>
+            </h1>
+            <div id="root">
+                <button id="new-prod-btn">Add New Product</button>
+                <%- include('./partials/new-product-form') %>
+                    <main class="items-container">
+                        <% productsList.forEach((prod)=> { %>
+                            <article class="item">
+                                <div class="text">
+                                    <h3>
+                                        <%= prod.id %>: <%= prod.name %>
+                                    </h3>
+                                    <a href="/products/type/<%=prod.type%>"><%= prod.type %></a>
+                                    <p>Description: <%= prod.description %>
+                                    </p>
+                                    <a class="inner-button" href="/products/<%= prod.id %>"> View Details</a>
+                                    <button class="delete-prod" id="<%= prod.id %>">Delete Product</button>
+                                </div>
+                            </article>
+                            <% }) %>
+                    </main>
+            </div>
+    </body>
+
+    </html>

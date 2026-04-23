@@ -1,0 +1,23 @@
+<%- include('./partials/head') %>
+  <title>
+    <%= title %>
+  </title>
+  </head>
+
+  <body>
+    <%- include('./partials/nav') %>
+      <div class="index-container">
+        <% if(typeof user==='undefined' ){ %>
+          <p> <a href="/auth/login">Login</a> or <a href="/auth/register">Register</a></p>
+          <% } %>
+            <% if(typeof user!='undefined' ){ %>
+              <h2>Welcome, <%= user.firstname %>!</h2>
+              <% } %>
+                <main>
+                  <h1>Products CRUD Demo App</h1>
+                  <a href="/products">View Products List</a>
+                </main>
+      </div>
+  </body>
+
+  </html>
